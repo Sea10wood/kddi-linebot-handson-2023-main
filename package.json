@@ -1,0 +1,38 @@
+{
+  "name": "linebot-handson",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "dev": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "logs": "firebase functions:log",
+    "eslint": "eslint --ext \".ts\" . --fix",
+    "prettier": "prettier --write .",
+    "lint": "npm run eslint && npm run prettier"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "@line/bot-sdk": "^7.5.0",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "firebase-admin": "^11.0.1",
+    "firebase-functions": "^3.22.0",
+    "module-alias": "^2.2.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.1",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  }
+}
